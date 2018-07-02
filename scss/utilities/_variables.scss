@@ -1,3 +1,46 @@
+// ===================
+// Variables
+// ===================
+
+// font stack
+$font-url--google : 'Noto Sans', sans-serif;
+
+// font weight
+$base__font-size  : 16px;
+//descriptive Base theme__colors
+
+$white      : #F9F9F2;
+$black      : #020817;
+$grey       : #797e83;
+
+// Color Palette Modifiers
+$palettes: (
+  grey: (
+    xx-light : lighten($grey, 43%),
+    x-light  : lighten($grey, 35%),
+    light    : lighten($grey, 12%),
+    base     : $grey,
+    dark     : darken($grey, 8%),
+    x-dark   : darken($grey, 16%)
+  ),
+	black: (
+		light    : lighten($black, 10%),
+		base     : $black,
+		dark     : darken($black, 10%)
+	)
+);
+
+
+// Color Usage
+$sea-foam       : #279B8C;
+$sunny-gold     : #FECA61;
+$shallow-sea    : #B5E2E5;
+$riverstone-blue: #327D9D;
+$underwater-blue: #080A4A;
+
+
+
+
 // breakpoints
 $break-xxs : 320px;
 $break-xs  : 425px;

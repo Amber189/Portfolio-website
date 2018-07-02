@@ -1,0 +1,17 @@
+// ===================================
+// Functions
+// ===================================
+
+
+
+// calculate em values
+
+@function em($target, $context: $base__font-size) {
+  @return ($target / $context) * 1em;
+}
+
+// calculate percentage
+
+    // @function percentage($target, $context){
+    //   @return ($target / $context) * 100%;
+    // }

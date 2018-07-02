@@ -1,0 +1,92 @@
+// ==========================================================================
+// Base Styles
+// ==========================================================================
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body {
+  @include mq (medium){
+  margin-top: em(30px);
+  // padding: 0 5em;
+}
+
+}
+
+
+
+h1,
+h2{
+  text-align: center;
+
+}
+
+.logo-1{
+  display:none;
+  font-size: 2em;
+  border:  1px solid $black;
+  border-radius: 100%;
+  position: absolute;
+    left: 40px;
+    top: 5px;
+  height: 200px;
+  width: 200px;
+  line-height: 200px;
+
+
+  background-color: $white;
+  @include mq (medium){
+    display: initial;
+  }
+}
+.logo-2{
+  font-size: 1em;
+  border:  1px solid $black;
+  border-radius: 100%;
+  position: absolute;
+    left:35%;
+    top: em(25px);
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+
+
+  background-color: $white;
+  @include mq(medium){
+    display:none;
+  }
+}
+
+.intro p{
+  text-align: center;
+}
+
+#aboutMe{
+  display: inline-block;
+  @extend %P-margins;
+  h3{
+    margin-top: 3em;
+  }
+  p{
+    text-align: left;
+  }
+}
+
+#resume{
+  background-color: $riverstone-blue;
+  color: $white;
+  @extend %P-margins;
+}
+
+#contact{
+    text-align: center;
+    span{
+      display: inline-block;
+    }
+  }
+
+
+  footer{
+    color: $grey;
+    text-align:  center;
+  }

@@ -1,0 +1,53 @@
+// ===================================
+// Buttons
+// ===================================
+
+//remove default styling
+button{
+  display: block;
+  margin      : 0 auto;
+  padding     : 0;
+  border      : 0;
+  max-width: 250px;
+  background  : transparent;
+  font-family : inherit;
+  font-size   : 1em;
+  text-align:  center;
+  cursor      : pointer;
+  & span{
+    //span elements as block-level elements in order to make them easier to style (while using div elements would have had the same effect, a div element inside a button is invalid HTML
+    display:inline-block;
+  }
+}
+//Firefox remove space around button
+button::-moz-focus-inner{
+  padding : 0;
+  border  : 0;
+}
+button > span{
+  // padding     : 0 8px;
+  // line-height : 24px;
+  color       : white;
+  text-shadow : 0 0 2px black;
+  border        : 1px solid rgb(128,128,128);
+  border-radius : 4px;
+  background       : rgb(192,192,192);
+  background-image :    -moz-linear-gradient(
+    rgb(224,224,224),rgb(192,192,192) 50%,rgb(160,160,160) 50%,rgb(192,192,192));
+  background-image :     -ms-linear-gradient(
+    rgb(224,224,224),rgb(192,192,192) 50%,rgb(160,160,160) 50%,rgb(192,192,192));
+  background-image :      -o-linear-gradient(
+    rgb(224,224,224),rgb(192,192,192) 50%,rgb(160,160,160) 50%,rgb(192,192,192));
+  background-image : -webkit-linear-gradient(
+    rgb(224,224,224),rgb(192,192,192) 50%,rgb(160,160,160) 50%,rgb(192,192,192));
+  background-image :         linear-gradient(
+    rgb(224,224,224),rgb(192,192,192) 50%,rgb(160,160,160) 50%,rgb(192,192,192));
+  & span{
+    padding     : 0 8px;
+    line-height : 24px;
+    border        : 1px solid rgb(192,192,192);
+    border-radius : 3px;
+  }
+}
+// background-image : linear-gradient(
+//   rgb(224,224,224),rgb(192,192,192) 50%,rgb(160,160,160) 50%,rgb(192,192,192));

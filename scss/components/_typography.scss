@@ -1,0 +1,23 @@
+// ===================
+// Typography
+// ===================
+
+body{
+  font: 14px $font-url--google;
+  color: $underwater-blue;
+  @include mq(medium){
+    font-size: em(16px);
+  }
+}
+.intro{
+  color: white;
+  &h1{
+    font-size: 2em;
+  }
+  &h2{
+    font-size: 1em;
+  }
+  &p{
+    font-size: 16px;
+  }
+}

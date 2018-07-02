@@ -1,0 +1,71 @@
+// ===================
+// Images and icons
+// ===================
+
+
+// Main intro photo
+
+.intro {
+  max-width: 100%;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top:20%;
+  height: 450px;
+  background: linear-gradient($sunny-gold, transparent 90%), linear-gradient(0deg, #fff, transparent), $sunny-gold url("../img/railway.jpg") no-repeat center;
+  background-size: cover;
+  @include mq(medium){
+    max-width: 95%;
+  }
+}
+
+//about media
+
+#headShot{
+  display: inline-block;
+  max-width: 200px;
+  max-height: 200px;
+  margin: 30px 5% 0;
+  border-radius: 100%;
+}
+
+// contact icons
+
+// #Github{
+//     -ms-transform: scale(.1); /* IE 9 */
+//     -webkit-transform: scale(.1); /* Safari */
+//     transform: scale(.1);
+// }
+
+
+#contact a {
+  display: block;
+  min-height: 20px;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding: 0 0 0 30px;
+  margin: 0 0 10px;
+  text-align: left;
+}
+
+
+#contact ul{
+  list-style: none;
+  display: inline-block;
+  // padding: 0;
+  // margin: 0;
+  font-size: .9em;
+
+  & li.phone a{
+    background-image: url('../img/phone.png');
+  }
+  & li.gmail a{
+    background-image: url('../img/mail.png');
+   }
+  & li.linkedin a{
+    background-image: url('../img/linkedin.svg');
+   }
+  & li.github a{
+    background-image: url('../img/github.svg');
+  }
+}
