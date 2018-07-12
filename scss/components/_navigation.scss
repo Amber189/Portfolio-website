@@ -11,22 +11,21 @@ nav{
 
 nav ul{
   margin: 0 auto;
-  list-style-type: none;
   padding: 0;
   background-color: $sunny-gold;
   @include mq(medium){
     background-color: #fff;
     max-width: 95%;
+    & li{
+      margin-left: em(20px);
+    }
   }
-  & li{
 
-  }
   & a{
-    text-decoration: none;
-    font: bold em(13.5px);
     color: #fff;
-    padding: 0.3125em;
-    // display: inline-block;
+    padding: em(8px) ;
+    padding-left: em(15px);
+    padding-right: em(15px);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -38,21 +37,17 @@ nav ul{
       background-color: $sea-foam;
       color: $white;
       border-radius: 5px;
-      // display: inline-block;
       border: solid 1px $riverstone-blue;
-
-    vertical-align: middle;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0);
-    transition-property: box-shadow;
-    transform: perspective(8px) translateZ(0);
-    transition-duration: 0.3s;
-    -webkit-transform: perspective(1px) translateZ(0);
-
-
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: box-shadow;
-
+      vertical-align: middle;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0);
+      transition-property: box-shadow;
+      transform: perspective(8px) translateZ(0);
+      // transition-duration: 0.3s ;
+      transition-timing-function: ease-in;
+      -webkit-transform: perspective(1px) translateZ(0);
+      // -webkit-transition-duration: 0.3s;
+      // transition-duration: 0.3s;
+      -webkit-transition-property: box-shadow;
     }
   }
   @include mq (medium){
@@ -66,7 +61,7 @@ nav ul{
 
 
 .hvr-glow {
-  display: inline-block;
+  // display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
@@ -77,5 +72,5 @@ nav ul{
   transition-property: box-shadow;
 }
 .hvr-glow:hover, .hvr-glow:focus, .hvr-glow:active {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 }

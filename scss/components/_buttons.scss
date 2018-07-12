@@ -4,7 +4,9 @@
 
 //remove default styling
 button{
-  display: block;
+  display: flex;
+  justify-content: center;
+  // display: block;
   margin      : 0 auto;
   padding     : 0;
   border      : 0;
@@ -12,11 +14,10 @@ button{
   background  : transparent;
   font-family : inherit;
   font-size   : 1em;
-  text-align:  center;
   cursor      : pointer;
   & span{
     //span elements as block-level elements in order to make them easier to style (while using div elements would have had the same effect, a div element inside a button is invalid HTML
-    display:inline-block;
+    // display:inline-block;
   }
 }
 //Firefox remove space around button

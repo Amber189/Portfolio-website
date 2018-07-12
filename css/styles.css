@@ -303,7 +303,9 @@ template {
 
 * {
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none; }
 
 @media (min-width: 768px) {
   body {
@@ -347,8 +349,20 @@ h2 {
 .intro p {
   text-align: center; }
 
+.portfolio h2 {
+  margin-top: 1.5625em; }
+
 #aboutMe {
-  display: inline-block; }
+  display: inline-block;
+  -webkit-box-shadow: 0px 3px 3px 0px #a89ea8;
+  -moz-box-shadow: 0px 3px 3px 0px #a89ea8;
+  box-shadow: 0px 1px 1px 0px #a89ea8; }
+  #aboutMe .aboutMeHeading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    #aboutMe .aboutMeHeading h2 {
+      align-self: flex-end; }
   #aboutMe h3 {
     margin-top: 3em; }
   #aboutMe p {
@@ -356,16 +370,57 @@ h2 {
 
 #resume {
   background-color: #327D9D;
-  color: #F9F9F2; }
+  color: #F9F9F2;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset; }
+
+.effect7 {
+  position: relative;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset; }
+
+.effect7:before, .effect7:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  border-radius: 100px / 10px; }
+
+.effect7:after {
+  right: 10px;
+  left: auto;
+  transform: skew(8deg) rotate(3deg); }
 
 #contact {
-  text-align: center; }
+  background-color: #279B8C;
+  color: #F9F9F2;
+  text-align: center;
+  padding-top: 0.625em; }
   #contact span {
     display: inline-block; }
+  #contact h3 {
+    color: #FECA61; }
+  #contact ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    padding-left: 0; }
+    #contact ul li {
+      margin-left: 1.875em;
+      margin-right: 1.875em; }
+  @media (min-width: 576px) {
+    #contact {
+      flex-direction: column; } }
 
 footer {
-  color: #797e83;
+  background-color: #d6d7d9;
+  color: #ebecec;
   text-align: center; }
+  footer p {
+    margin: 0; }
 
 body {
   font: 14px "Noto Sans", sans-serif;
@@ -383,6 +438,9 @@ body {
   .introp {
     font-size: 16px; }
 
+.portfolio p {
+  color: #080A4A; }
+
 nav {
   margin-top: 0;
   justify-content: center;
@@ -390,18 +448,19 @@ nav {
 
 nav ul {
   margin: 0 auto;
-  list-style-type: none;
   padding: 0;
   background-color: #FECA61; }
   @media (min-width: 768px) {
     nav ul {
       background-color: #fff;
-      max-width: 95%; } }
+      max-width: 95%; }
+      nav ul li {
+        margin-left: 1.25em; } }
   nav ul a {
-    text-decoration: none;
-    font: bold 0.84375em;
     color: #fff;
-    padding: 0.3125em;
+    padding: 0.5em;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
     display: flex;
     flex-wrap: wrap;
     justify-content: center; }
@@ -417,10 +476,8 @@ nav ul {
       box-shadow: 0 0 8px rgba(0, 0, 0, 0);
       transition-property: box-shadow;
       transform: perspective(8px) translateZ(0);
-      transition-duration: 0.3s;
+      transition-timing-function: ease-in;
       -webkit-transform: perspective(1px) translateZ(0);
-      -webkit-transition-duration: 0.3s;
-      transition-duration: 0.3s;
       -webkit-transition-property: box-shadow; }
   @media (min-width: 768px) {
     nav ul {
@@ -430,7 +487,6 @@ nav ul {
       justify-content: flex-end; } }
 
 .hvr-glow {
-  display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
@@ -441,14 +497,14 @@ nav ul {
   transition-property: box-shadow; }
 
 .hvr-glow:hover, .hvr-glow:focus, .hvr-glow:active {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); }
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6); }
 
 .intro {
   max-width: 100%;
   margin: 0 auto;
   padding-left: 0;
   padding-right: 0;
-  padding-top: 20%;
+  padding-top: 15%;
   height: 450px;
   background: linear-gradient(#FECA61, transparent 90%), linear-gradient(0deg, #fff, transparent), #FECA61 url("../img/railway.jpg") no-repeat center;
   background-size: cover; }
@@ -458,23 +514,75 @@ nav ul {
 
 #headShot {
   display: inline-block;
-  max-width: 200px;
   max-height: 200px;
   margin: 30px 5% 0;
-  border-radius: 100%; }
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
+.portfolio {
+  margin: 0 auto; }
+
+.portfolio ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 0; }
+  .portfolio ul li {
+    text-align: center;
+    margin-top: 1.125em; }
+  .portfolio ul img {
+    max-width: 55%;
+    box-shadow: 0px 2px 1px 0 rgba(39, 155, 140, 0.5); }
+  @media (min-width: 576px) {
+    .portfolio ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center; }
+      .portfolio ul li {
+        max-width: 100%;
+        margin: 25px; }
+      .portfolio ul img {
+        max-width: 100%; } }
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA; }
+
+.container:hover .overlay {
+  opacity: 1; }
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center; }
 
 #contact a {
   display: block;
+  color: #d6d7d9;
   min-height: 20px;
   background-repeat: no-repeat;
   background-size: 20px 20px;
   padding: 0 0 0 30px;
   margin: 0 0 10px;
-  text-align: left; }
+  text-align: left;
+  text-decoration: none; }
 
 #contact ul {
   list-style: none;
-  display: inline-block;
   font-size: .9em; }
   #contact ul li.phone a {
     background-image: url("../img/phone.png"); }
@@ -486,7 +594,8 @@ nav ul {
     background-image: url("../img/github.svg"); }
 
 button {
-  display: block;
+  display: flex;
+  justify-content: center;
   margin: 0 auto;
   padding: 0;
   border: 0;
@@ -494,10 +603,7 @@ button {
   background: transparent;
   font-family: inherit;
   font-size: 1em;
-  text-align: center;
   cursor: pointer; }
-  button span {
-    display: inline-block; }
 
 button::-moz-focus-inner {
   padding: 0;

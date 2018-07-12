@@ -10,7 +10,7 @@
   margin: 0 auto;
   padding-left: 0;
   padding-right: 0;
-  padding-top:20%;
+  padding-top:15%;
   height: 450px;
   background: linear-gradient($sunny-gold, transparent 90%), linear-gradient(0deg, #fff, transparent), $sunny-gold url("../img/railway.jpg") no-repeat center;
   background-size: cover;
@@ -23,39 +23,106 @@
 
 #headShot{
   display: inline-block;
-  max-width: 200px;
   max-height: 200px;
   margin: 30px 5% 0;
-  border-radius: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
-// contact icons
 
-// #Github{
-//     -ms-transform: scale(.1); /* IE 9 */
-//     -webkit-transform: scale(.1); /* Safari */
-//     transform: scale(.1);
-// }
+//Portfolio Images
+.portfolio{
+  margin: 0 auto;
+  // max-width: 1200px;
 
+}
+.portfolio ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  // max-width: 100%;
+  align-items: center;
+  padding-left: 0;
+  & li{
+    text-align: center;
+    // max-width: 100%;
+    margin-top: em(18px);
+  }
+  & img{
+    // max-width: 150px;
+    // max-height: 200px;
+    max-width: 55%;
+    box-shadow: 0px 2px 1px 0 rgba(39, 155, 140, .5)
+    // box-shadow: 1px 1px 2px 1px rgba(39, 155, 140, .5), -1px -1px 2px 1px rgba(39, 155, 140, .5);
+  }
+  @include mq(small){
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    & li{
+      max-width: 100%;
+      margin: 25px;
+    }
+    & img{
+      max-width: 100%;
+      // max-height: 350px;
+    }
+  }
+  }
+
+  .overlay {
+
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+
+  .container:hover .overlay {
+    opacity: 1;
+  }
+
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+
+
+
+
+
+//Contact Icons
 
 #contact a {
   display: block;
+  color: palette(grey ,x-light);
   min-height: 20px;
   background-repeat: no-repeat;
   background-size: 20px 20px;
   padding: 0 0 0 30px;
   margin: 0 0 10px;
   text-align: left;
+  text-decoration: none;
 }
 
 
 #contact ul{
   list-style: none;
-  display: inline-block;
-  // padding: 0;
-  // margin: 0;
   font-size: .9em;
-
   & li.phone a{
     background-image: url('../img/phone.png');
   }
