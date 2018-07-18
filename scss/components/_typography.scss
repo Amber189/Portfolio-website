@@ -11,14 +11,15 @@ body{
 }
 .intro{
   color: white;
-  &h1{
-    font-size: 2em;
+  & h1{
+    font-size: em(50px);
   }
-  &h2{
-    font-size: 1em;
+  & h2{
+    font-size: em(26px);
   }
-  &p{
+  & p{
     font-size: 16px;
+    padding: 0 15px;
   }
 }
 

@@ -18,61 +18,64 @@ body {
 
 
 h1,
-h2{
-  text-align: center;
-
-}
-
-.logo-1{
-  display:none;
-  font-size: 2em;
-  border:  1px solid $black;
-  border-radius: 100%;
-  position: absolute;
-    left: 40px;
-    top: 5px;
-  height: 200px;
-  width: 200px;
-  line-height: 200px;
-
-
-  background-color: $white;
-  @include mq (medium){
-    display: initial;
-  }
-}
-.logo-2{
-  font-size: 1em;
-  border:  1px solid $black;
-  border-radius: 100%;
-  position: absolute;
-    left:35%;
-    top: em(25px);
-  height: 100px;
-  width: 100px;
-  line-height: 100px;
-
-
-  background-color: $white;
-  @include mq(medium){
-    display:none;
-  }
-}
-
+h2,
 .intro p{
   text-align: center;
+
 }
+
+// .logo-1{
+//   display:none;
+//   font-size: 2em;
+//   border:  1px solid $black;
+//   border-radius: 100%;
+//   position: absolute;
+//     left: 40px;
+//     top: 5px;
+//   height: 200px;
+//   width: 200px;
+//   line-height: 200px;
+//
+//
+//   background-color: $white;
+//   @include mq (medium){
+//     display: initial;
+//   }
+// }
+// .logo-2{
+//   font-size: 1em;
+//   border:  1px solid $black;
+//   border-radius: 100%;
+//   position: absolute;
+//     left:35%;
+//     top: em(25px);
+//   height: 100px;
+//   width: 100px;
+//   line-height: 100px;
+
+
+//   background-color: $white;
+//   @include mq(medium){
+//     display:none;
+//   }
+// }
+
+
 
 .portfolio h2{
 	margin-top: em(25px);
 }
 
 #aboutMe{
+	background-color: $white;
   display: inline-block;
+	border: 10px double $sunny-gold;
+	margin: 5%;
+	max-width: 90%;
   -webkit-box-shadow: 0px 3px 3px 0px rgba(168,158,168,1);
 	-moz-box-shadow: 0px 3px 3px 0px rgba(168,158,168,1);
 	box-shadow: 0px 1px 1px 0px rgba(168,158,168,1);
-  @extend %P-margins;
+  @extend %P-mobile-margins;
 	.aboutMeHeading{
 		display: flex;
 		flex-wrap: wrap;
@@ -92,21 +95,26 @@ h2{
 #resume{
   background-color: $riverstone-blue;
   color: $white;
-  @extend %P-margins;
-
-
-
-
-
-    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  @extend %P-mobile-margins;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	& li{
+		list-style: initial;
+	}
 }
-.effect7
-{
+
+#aboutMe,
+#resume{
+	@include mq(medium) {
+		padding: 20px 85px;
+	}
+}
+
+.effect7{
     position:relative;
     box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
-.effect7:before, .effect7:after
-{
+
+.effect7:before, .effect7:after{
     content:"";
     position:absolute;
     z-index:-1;
@@ -117,8 +125,8 @@ h2{
     right:10px;
     border-radius:100px / 10px;
 }
-.effect7:after
-{
+
+.effect7:after{
     right:10px;
     left:auto;
     transform:skew(8deg) rotate(3deg);
@@ -155,15 +163,18 @@ h2{
 
 
 #contact{
-  background-color: $sea-foam;
+  background-color: $underwater-blue;
   color: $white;
   text-align: center;
   padding-top:  em(10px);
+	padding-bottom: em(10px);
     span{
       display: inline-block;
+			padding: 0 13px;
     }
     & h3{
     color: $sunny-gold;
+		text-shadow: 1px 1px $underwater-blue;
 		}
 		& ul{
 			display: flex;
@@ -183,10 +194,47 @@ h2{
 
 
   footer{
-    background-color: palette(grey, x-light);
-    color: palette(grey, xx-light);
+    background-color: $sea-foam;
+    // color: palette(grey, x-light);
+		color: $shallow-sea;
     text-align:  center;
+		font-size: em(13px);
     & p{
       margin: 0;
   }
+}
+
+
+// ============================
+// ONLINE FORM Page
+// ============================
+.form{
+	background-color: $white;
+	padding-bottom: 1px;
+}
+.form-img,
+.style-img,
+.form-text{
+	@extend %P-mobile-margins;
+}
+.container-form{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	border-top: 3px solid $underwater-blue;
+
+
+	@include mq(medium){
+		flex-direction: row;
+	}
+	& li{
+		list-style: initial;
+		padding: 8px 0;
+	}
+}
+
+
+
+.form-text{
+
 }
