@@ -12,12 +12,8 @@
   padding-right: 0;
   padding-top:15%;
   height: 450px;
-  background: linear-gradient($sunny-gold, transparent 90%), linear-gradient(0deg, #fff, transparent), $sunny-gold url("../img/railway.jpg") no-repeat center;
+  background: linear-gradient($white, transparent 90%), linear-gradient(0deg, #fff, transparent), $sunny-gold url("../img/railway.jpg") no-repeat center;
   background-size: cover;
-  @include mq(medium){
-    max-width: 95%;
-    padding-top: 5%;
-  }
 }
 
 //about media
@@ -59,7 +55,8 @@
     // max-width: 150px;
     // max-height: 200px;
     max-width: 55%;
-    box-shadow: 0px 2px 2px 0 rgba(8, 10, 74, .5)
+    box-shadow: 0px 2px 2px 0 rgba(8, 10, 74, .5);
+    border-radius: 4px;
 
     // box-shadow: 1px 1px 2px 1px rgba(39, 155, 140, .5), -1px -1px 2px 1px rgba(39, 155, 140, .5);
   }
@@ -143,7 +140,7 @@
 
 
 // ============================
-// ONLINE FORM Page
+// Web Development Pages
 // ============================
 
 
@@ -153,22 +150,33 @@
   width: 100%;
   // max-width: 320px;
   height: auto;
-
+  -moz-box-shadow:    -3px 3px 8px 4px gray;
+  -webkit-box-shadow: -3px 3px 8px 4px gray;
+  box-shadow: -3px 3px 8px 4px gray;
   @include mq(medium){
-    max-width: 60%
+    max-width: 50%
   }
 }
+
+//*** Photo Gallery extra photo sizing***
 
 .wrapper{
   display: flex;
   flex-direction: column;
   @include mq(medium){
-  max-width: 60%;
+  max-width: 50%;
   }
-  & img{
+  & img
+  {
     max-width: 100%;
+    padding: 5px;
+    margin: 10px;
     @include mq(medium){
     margin-top: 10px;
   }
   }
+}
+
+.img-frame{
+  border: 1px solid gray;
 }

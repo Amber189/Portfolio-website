@@ -9,6 +9,9 @@ body{
     font-size: em(16px);
   }
 }
+.main-header h1{
+  font-family: $font-url--google_secondary;
+}
 .intro{
   color: white;
   & h1{

@@ -7,12 +7,21 @@
   list-style-type: none;
   text-decoration: none;
 }
-body {
-  @include mq (medium){
-  margin-top: em(30px);
-  // padding: 0 5em;
+
+//extra white space on right
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
 }
 
+body{
+	@include mq (medium){
+	padding-top: em(60.25px);
+ }
 }
 
 
@@ -24,41 +33,7 @@ h2,
 
 }
 
-// .logo-1{
-//   display:none;
-//   font-size: 2em;
-//   border:  1px solid $black;
-//   border-radius: 100%;
-//   position: absolute;
-//     left: 40px;
-//     top: 5px;
-//   height: 200px;
-//   width: 200px;
-//   line-height: 200px;
-//
-//
-//   background-color: $white;
-//   @include mq (medium){
-//     display: initial;
-//   }
-// }
-// .logo-2{
-//   font-size: 1em;
-//   border:  1px solid $black;
-//   border-radius: 100%;
-//   position: absolute;
-//     left:35%;
-//     top: em(25px);
-//   height: 100px;
-//   width: 100px;
-//   line-height: 100px;
 
-
-//   background-color: $white;
-//   @include mq(medium){
-//     display:none;
-//   }
-// }
 
 
 
@@ -133,33 +108,6 @@ h2,
 }
 
 
-// #contact{
-//
-//   background-color: palette(grey, xx-light);
-//     text-align: center;
-//       padding-top:  em(10px);
-//     span{
-//       display: inline-block;
-//
-//     }
-//     & h3{
-//     color: $sunny-gold;
-//
-//
-//     // text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-// }
-// }
-//
-//
-//   footer{
-//     background-color: palette(grey, xx-light);
-//     color: $white;
-//     text-align:  center;
-//     & p{
-//       margin: 0;
-//   }
-// }
-
 
 
 #contact{
@@ -208,20 +156,25 @@ h2,
 // ============================
 // ONLINE FORM Page
 // ============================
-.form{
+section.form{
 	background-color: $white;
-	padding-bottom: 1px;
+	padding: 0 25px 10px;
+	border-top: 3px solid $underwater-blue;
+
 }
 .form-img,
 .style-img,
 .form-text{
-	@extend %P-mobile-margins;
+	@include mq(medium){
+	margin: 20px 35px;
+	// @extend %P-mobile-margins;
+	}
 }
 .container-form{
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	border-top: 3px solid $underwater-blue;
+
 
 
 	@include mq(medium){
