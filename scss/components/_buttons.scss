@@ -35,10 +35,7 @@ input{
   text-shadow : 0 0 2px black;
   // border        : 1px solid rgb(128,128,128);
   border-radius : 2px;
-  background       : $shallow-sea;
-
-
-
+  background       : $sunny-gold;
   & span, input{
     padding     : 4px 8px;
     line-height : 30px;
@@ -48,7 +45,7 @@ input{
 
 
 // ============================
-// ONLINE FORM Page
+// External Portfolio Pages
 // ============================
 
 
@@ -58,6 +55,6 @@ input{
   width: 50%;
   margin: 0 auto 20px;
   &:hover{
-    background-color: $sunny-gold;
+    background-color: $shallow-sea ;
   }
 }
