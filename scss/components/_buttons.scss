@@ -3,44 +3,35 @@
 // ===================================
 
 //remove default styling
-button,
-input{
+// button,
+// input,
+a.btn{
   display: flex;
   justify-content: center;
   // display: block;
-  margin      : 0 auto;
-  padding     : 0;
-  border      : 0;
-  max-width: 250px;
-  background  : transparent;
-  font-family : inherit;
-  font-size   : 1em;
-  line-height: 30px;
+  // margin      : 0 auto;
+  // padding     : 0;
+  // border      : 0;
+  max-width: 350px;
+  // background  : transparent;
+  // font-family : inherit;
+  // font-size   : 1em;
+  // line-height: 30px;
   cursor      : pointer;
-  & span{
-    //span elements as block-level elements in order to make them easier to style (while using div elements would have had the same effect, a div element inside a button is invalid HTML
-    // display:inline-block;
-  }
 }
-//Firefox remove space around button
-button::-moz-focus-inner{
-  padding : 0;
-  border  : 0;
-}
-button > span,
-input{
-  // padding     : 0 8px;
+
+// button > span,
+// input,
+a.btn{
+  // padding     : 4px 8px;
   line-height : 30px;
   color       : white;
   text-shadow : 0 0 2px black;
   // border        : 1px solid rgb(128,128,128);
   border-radius : 2px;
   background       : $sunny-gold;
-  & span, input{
-    padding     : 4px 8px;
-    line-height : 30px;
-    border-radius : 2px;
-  }
+  // & span, input,
+
 }
 
 
@@ -49,12 +40,133 @@ input{
 // ============================
 
 
-button,
-input{
-  display: block;
-  width: 50%;
+// button,
+// input,
+a.btn{
+  // display: block;
+  // width: 50%;
   margin: 0 auto 20px;
   &:hover{
     background-color: $shallow-sea ;
   }
 }
+
+//
+// // ============================
+// // Report Card Widget
+// // ============================
+//
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+//
+// // properties
+// $color-background: #f9f9f9;
+// $color-primary: #222222;
+// $size-circle: 12.5em;
+// $size-thickness: 2.5em;
+// $size-inner: $size-circle - $size-thickness * 2;
+//
+// // resets
+// * {
+//   padding: 0;
+//   margin: 0;
+//   box-sizing: border-box;
+//   color: $color-primary;
+// }
+//
+// // clearfix
+// .group:after {content:"";display:table;clear:both;}
+//
+// // general
+// body {
+//   font-family: "Open Sans", Arial;
+//   background: $color-background;
+//
+//   a {
+//     text-decoration: none;
+//   }
+//
+//   .team-treehouse {
+//
+//     h1, h2 {
+//       text-align: center;
+//     }
+//     h2 {
+//       font-weight: normal;
+//     }
+//   }
+// }
+//
+//
+// // pie chart
+// .pieChart {
+//   width: $size-circle + 13em;
+//   margin: 0 auto;
+//   padding-top: 1em;
+// }
+//
+// // pie
+// .pie {
+//   height: $size-circle;
+//   width: $size-circle;
+//   position: relative;
+//   float:left;
+//
+//   &::before {
+//     content: "";
+//     display: block;
+//     position: absolute;
+//     z-index: 1;
+//     width: $size-inner;
+//     height: $size-inner;
+//     background: $color-background;
+//     border-radius: 50%;
+//     top: $size-thickness;
+//     left: $size-thickness;
+//   }
+// }
+//
+// .slice {
+//   position: absolute;
+//   width: $size-circle;
+//   height: $size-circle;
+//   clip: rect(0px, $size-circle, $size-circle, $size-circle/2);
+//   animation: bake-pie 1s;
+//
+//   span {
+//     display: block;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     background-color: black;
+//     width: $size-circle;
+//     height: $size-circle;
+//     border-radius: 50%;
+//     clip: rect(0px, $size-circle, $size-circle, $size-circle/2);
+//   }
+// }
+//
+// // legend
+// .legend {
+//   width: 13em;
+//   padding-left: 1em;
+//   float:left;
+//
+//   ul {
+//     list-style-type: none;
+//     list-style-position: inside;
+//     font-size: 0.8em;
+//   }
+//   li {
+//     height: 1.25em;
+//     margin-bottom: 0.7em;
+//     padding-left: 0.5em;
+//     border-left: 1.25em solid black;
+//   }
+//   em {
+//     font-style: normal;
+//   }
+//   span {
+//     float: right;
+//     font-weight: bold;
+//   }
+// }

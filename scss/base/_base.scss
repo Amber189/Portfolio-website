@@ -39,17 +39,22 @@ h2,
 
 .portfolio h2{
 	margin-top: em(25px);
+	width: 100%;
 }
 
 #aboutMe{
 	background-color: $white;
-  display: inline-block;
+  display: flex;
+	flex-direction: column;
 	border: 10px double $sunny-gold;
 	margin: 5%;
 	max-width: 90%;
   -webkit-box-shadow: 0px 3px 3px 0px rgba(168,158,168,1);
 	-moz-box-shadow: 0px 3px 3px 0px rgba(168,158,168,1);
 	box-shadow: 0px 1px 1px 0px rgba(168,158,168,1);
+	@include mq(large){
+		flex-direction: row;
+	}
   @extend %P-mobile-margins;
 	.aboutMeHeading{
 		display: flex;
@@ -59,12 +64,19 @@ h2,
 			align-self: flex-end;
 		}
 	}
-  h3{
-    margin-top: 3em;
-  }
+  
   p{
     text-align: left;
   }
+	& section{
+		background-color: $white;
+		margin: 25px 0;
+		padding: 0;
+		@include mq(large){
+			flex: 1;
+			padding: 0 35px;
+		}
+	}
 }
 
 #resume{
@@ -79,8 +91,8 @@ h2,
 
 #aboutMe,
 #resume{
-	@include mq(medium) {
-		padding: 20px 85px;
+	@include mq(large) {
+		padding: 20px 5px;
 	}
 }
 
@@ -154,15 +166,22 @@ h2,
 
 
 // ============================
-// ONLINE FORM Page
+// External Pages
 // ============================
-section.form{
+div.container{
 	background-color: $white;
 	padding: 17px 25px 10px;
-	border-top: 3px solid $underwater-blue;
+	@include mq(medium){
 	margin-top: -11px;
+	padding: 20px 10% 15px;
+	}
 
 }
+
+section{
+	margin: 75px 0;
+}
+
 .form-img,
 .style-img,
 .form-text{
@@ -171,13 +190,11 @@ section.form{
 	// @extend %P-mobile-margins;
 	}
 }
-.container-form{
+
+.container-form,{
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-
-
-
 	@include mq(medium){
 		flex-direction: row;
 	}
@@ -187,8 +204,14 @@ section.form{
 	}
 }
 
-
-
-.form-text{
-
+.overview{
+	display: flex;
+	flex-direction: column;
+	& span {
+		align-self: center;
+		margin-bottom: 50px;
+	}
+	& li{
+		margin: 8px 0;
+	}
 }

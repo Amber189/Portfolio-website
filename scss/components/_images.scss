@@ -12,7 +12,7 @@
   padding-right: 0;
   padding-top:15%;
   height: 450px;
-  background: linear-gradient($white, transparent 90%), linear-gradient(0deg, #fff, transparent), $sunny-gold url("../img/railway.jpg") no-repeat center;
+  background: linear-gradient($white, transparent 30%), linear-gradient(0deg, #fff, transparent), $sunny-gold url("../img/amber_opt.jpg") no-repeat center;
   background-size: cover;
 }
 
@@ -179,4 +179,43 @@
 
 .img-frame{
   border: 1px solid gray;
+}
+
+
+// Human Centered Design page
+
+.full-size img{
+  max-width: 100%;
+}
+
+div .acumen {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @include mq(medium){
+    flex-direction: row;
+  }
+  & img{
+    align-self: center;
+    @include mq(medium){
+      margin: 20px 0;
+    }
+  }
+}
+
+div .dual-photo{
+  // width: 45%;
+  @include mq(medium){
+    margin: 20px 10px;
+  }
+  & img{
+    max-width: 85%;
+    margin-top: 10px;
+    margin-bottom:15px;
+    @include mq(medium){
+      max-width: 45%;
+      margin: 20px;
+    }
+  }
+
 }

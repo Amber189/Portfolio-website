@@ -10,22 +10,52 @@ body{
   }
 }
 .main-header h1{
-  font-family: $font-url--google_secondary;
+  font-family: 'Fredericka the Great', cursive;
+  letter-spacing: 2;
 }
 .intro{
   color: white;
+
   & h1{
+
     font-size: em(50px);
   }
   & h2{
-    font-size: em(26px);
+    font-size: em(40px);
+    text-shadow: -1px 1px saddlebrown;
   }
   & p{
-    font-size: 16px;
+    font-size: em(26px);
     padding: 0 15px;
+    text-shadow: -1px 1px saddlebrown;
   }
 }
 
+//External Pages
+
+section{
+  line-height: 1.5;
+	letter-spacing: .1px;
+  background-color: white;
+  padding: 30px;
+}
+
+
 .portfolio p{
   color: $underwater-blue;
+}
+
+em{
+  text-decoration: underline;
+}
+blockquote{
+  font-family: $font-url--google_secondary;
+  font-size: em(20px);
+  font-style: italic;
+  color: saddlebrown;
+  margin: 15px 55px;
+  padding-left: 15px;
+  border-left: solid 5px $sea-foam;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }

@@ -324,27 +324,38 @@ h2,
   text-align: center; }
 
 .portfolio h2 {
-  margin-top: 1.5625em; }
+  margin-top: 1.5625em;
+  width: 100%; }
 
 #aboutMe {
   background-color: #F9F9F2;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   border: 10px double #FECA61;
   margin: 5%;
   max-width: 90%;
   -webkit-box-shadow: 0px 3px 3px 0px #a89ea8;
   -moz-box-shadow: 0px 3px 3px 0px #a89ea8;
   box-shadow: 0px 1px 1px 0px #a89ea8; }
+  @media (min-width: 992px) {
+    #aboutMe {
+      flex-direction: row; } }
   #aboutMe .aboutMeHeading {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; }
     #aboutMe .aboutMeHeading h2 {
       align-self: flex-end; }
-  #aboutMe h3 {
-    margin-top: 3em; }
   #aboutMe p {
     text-align: left; }
+  #aboutMe section {
+    background-color: #F9F9F2;
+    margin: 25px 0;
+    padding: 0; }
+    @media (min-width: 992px) {
+      #aboutMe section {
+        flex: 1;
+        padding: 0 35px; } }
 
 #resume {
   background-color: #327D9D;
@@ -353,10 +364,10 @@ h2,
   #resume li {
     list-style: initial; }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   #aboutMe,
   #resume {
-    padding: 20px 85px; } }
+    padding: 20px 5px; } }
 
 .effect7 {
   position: relative;
@@ -411,11 +422,16 @@ footer {
   footer p {
     margin: 0; }
 
-section.form {
+div.container {
   background-color: #F9F9F2;
-  padding: 17px 25px 10px;
-  border-top: 3px solid #080A4A;
-  margin-top: -11px; }
+  padding: 17px 25px 10px; }
+  @media (min-width: 768px) {
+    div.container {
+      margin-top: -11px;
+      padding: 20px 10% 15px; } }
+
+section {
+  margin: 75px 0; }
 
 @media (min-width: 768px) {
   .form-img,
@@ -434,6 +450,15 @@ section.form {
     list-style: initial;
     padding: 8px 0; }
 
+.overview {
+  display: flex;
+  flex-direction: column; }
+  .overview span {
+    align-self: center;
+    margin-bottom: 50px; }
+  .overview li {
+    margin: 8px 0; }
+
 body {
   font: 14px "Noto Sans", sans-serif;
   color: #080A4A; }
@@ -442,20 +467,43 @@ body {
       font-size: 1em; } }
 
 .main-header h1 {
-  font-family: "Cormorant Unicase", serif; }
+  font-family: 'Fredericka the Great', cursive;
+  letter-spacing: 2; }
 
 .intro {
   color: white; }
   .intro h1 {
     font-size: 3.125em; }
   .intro h2 {
-    font-size: 1.625em; }
+    font-size: 2.5em;
+    text-shadow: -1px 1px saddlebrown; }
   .intro p {
-    font-size: 16px;
-    padding: 0 15px; }
+    font-size: 1.625em;
+    padding: 0 15px;
+    text-shadow: -1px 1px saddlebrown; }
+
+section {
+  line-height: 1.5;
+  letter-spacing: .1px;
+  background-color: white;
+  padding: 30px; }
 
 .portfolio p {
   color: #080A4A; }
+
+em {
+  text-decoration: underline; }
+
+blockquote {
+  font-family: "Cormorant Unicase", serif;
+  font-size: 1.25em;
+  font-style: italic;
+  color: saddlebrown;
+  margin: 15px 55px;
+  padding-left: 15px;
+  border-left: solid 5px #279B8C;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px; }
 
 .main-header.portfolio-page,
 .main-header.portfolio-page nav ul {
@@ -463,14 +511,14 @@ body {
 
 .main-header {
   max-width: 100%;
-  background-color: #F9F9F2;
-  margin-bottom: 18px; }
+  background-color: #F9F9F2; }
   .main-header h1, .main-header h3 {
     margin: 0;
     padding: 5px 0;
     text-align: center; }
   @media (min-width: 768px) {
     .main-header {
+      margin-bottom: 18px;
       background-color: #fff;
       position: fixed;
       width: 100%;
@@ -479,9 +527,7 @@ body {
       z-index: 1000;
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
-      border-bottom-left-radius: 4px;
-      border-bottom-right-radius: 4px; }
+      justify-content: space-between; }
       .main-header h1 {
         margin: 0.27em 0; }
       .main-header h1, .main-header h3 {
@@ -550,7 +596,7 @@ nav ul {
   padding-right: 0;
   padding-top: 15%;
   height: 450px;
-  background: linear-gradient(#F9F9F2, transparent 90%), linear-gradient(0deg, #fff, transparent), #FECA61 url("../img/railway.jpg") no-repeat center;
+  background: linear-gradient(#F9F9F2, transparent 30%), linear-gradient(0deg, #fff, transparent), #FECA61 url("../img/amber_opt.jpg") no-repeat center;
   background-size: cover; }
 
 #headShot {
@@ -664,45 +710,50 @@ nav ul {
 .img-frame {
   border: 1px solid gray; }
 
-button,
-input {
+.full-size img {
+  max-width: 100%; }
+
+div .acumen {
+  display: flex;
+  flex-direction: column;
+  width: 100%; }
+  @media (min-width: 768px) {
+    div .acumen {
+      flex-direction: row; } }
+  div .acumen img {
+    align-self: center; }
+    @media (min-width: 768px) {
+      div .acumen img {
+        margin: 20px 0; } }
+
+@media (min-width: 768px) {
+  div .dual-photo {
+    margin: 20px 10px; } }
+div .dual-photo img {
+  max-width: 85%;
+  margin-top: 10px;
+  margin-bottom: 15px; }
+  @media (min-width: 768px) {
+    div .dual-photo img {
+      max-width: 45%;
+      margin: 20px; } }
+
+a.btn {
   display: flex;
   justify-content: center;
-  margin: 0 auto;
-  padding: 0;
-  border: 0;
-  max-width: 250px;
-  background: transparent;
-  font-family: inherit;
-  font-size: 1em;
-  line-height: 30px;
+  max-width: 350px;
   cursor: pointer; }
 
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0; }
-
-button > span,
-input {
+a.btn {
   line-height: 30px;
   color: white;
   text-shadow: 0 0 2px black;
   border-radius: 2px;
   background: #FECA61; }
-  button > span span, button > span input,
-  input span,
-  input input {
-    padding: 4px 8px;
-    line-height: 30px;
-    border-radius: 2px; }
 
-button,
-input {
-  display: block;
-  width: 50%;
+a.btn {
   margin: 0 auto 20px; }
-  button:hover,
-  input:hover {
+  a.btn:hover {
     background-color: #B5E2E5; }
 
 /*# sourceMappingURL=styles.css.map */
