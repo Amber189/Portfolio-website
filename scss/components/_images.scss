@@ -112,7 +112,7 @@
   min-height: 20px;
   background-repeat: no-repeat;
   background-size: 20px 20px;
-  padding: 0 0 0 30px;
+  padding: 0 0 0 8px;
   margin: 0 0 10px;
   text-align: left;
   text-decoration: none;
@@ -122,17 +122,21 @@
 #contact ul{
   list-style: none;
   font-size: .9em;
-  & li.phone a{
-    background-image: url('../img/phone.png');
-  }
-  & li.gmail a{
-    background-image: url('../img/mail.png');
-   }
-  & li.linkedin a{
-    background-image: url('../img/linkedin.svg');
-   }
-  & li.github a{
-    background-image: url('../img/github.svg');
+  // & li.phone a{
+  //   background-image: url('../img/phone.svg');
+  // }
+  // & li.gmail a{
+  //   background-image: url('../img/email.svg');
+  //  }
+  // & li.linkedin a{
+  //   background-image: url('../img/linkedin.svg');
+  //  }
+  // & li.github a{
+  //   background-image: url('../img/github.svg');
+  // }
+  & svg{
+    width: em(25px);
+    height: em(25px);
   }
 }
 

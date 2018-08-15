@@ -324,8 +324,10 @@ h2,
   text-align: center; }
 
 .portfolio h2 {
-  margin-top: 1.5625em;
-  width: 100%; }
+  margin-top: 4.0625em;
+  margin-bottom: 1.875em;
+  width: 100%;
+  font-size: 1.6875em; }
 
 #aboutMe {
   background-color: #F9F9F2;
@@ -361,12 +363,14 @@ h2,
   background-color: #327D9D;
   color: #F9F9F2;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset; }
+  @media (min-width: 992px) {
+    #resume {
+      padding: 20px 10%; } }
   #resume li {
     list-style: initial; }
 
 @media (min-width: 992px) {
-  #aboutMe,
-  #resume {
+  #aboutMe {
     padding: 20px 5px; } }
 
 .effect7 {
@@ -408,6 +412,7 @@ h2,
     margin-bottom: 0;
     padding-left: 0; }
     #contact ul li {
+      display: inherit;
       margin-left: 1.875em;
       margin-right: 1.875em; }
   @media (min-width: 576px) {
@@ -467,7 +472,7 @@ body {
       font-size: 1em; } }
 
 .main-header h1 {
-  font-family: 'Fredericka the Great', cursive;
+  font-family: "Fredericka the Great", cursive;
   letter-spacing: 2; }
 
 .intro {
@@ -664,7 +669,7 @@ nav ul {
   min-height: 20px;
   background-repeat: no-repeat;
   background-size: 20px 20px;
-  padding: 0 0 0 30px;
+  padding: 0 0 0 8px;
   margin: 0 0 10px;
   text-align: left;
   text-decoration: none; }
@@ -672,14 +677,9 @@ nav ul {
 #contact ul {
   list-style: none;
   font-size: .9em; }
-  #contact ul li.phone a {
-    background-image: url("../img/phone.png"); }
-  #contact ul li.gmail a {
-    background-image: url("../img/mail.png"); }
-  #contact ul li.linkedin a {
-    background-image: url("../img/linkedin.svg"); }
-  #contact ul li.github a {
-    background-image: url("../img/github.svg"); }
+  #contact ul svg {
+    width: 1.5625em;
+    height: 1.5625em; }
 
 .form-img,
 .style-img {

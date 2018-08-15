@@ -38,8 +38,10 @@ h2,
 
 
 .portfolio h2{
-	margin-top: em(25px);
+	margin-top: em(65px);
+	margin-bottom: em(30px);
 	width: 100%;
+	font-size: em(27px);
 }
 
 #aboutMe{
@@ -64,7 +66,7 @@ h2,
 			align-self: flex-end;
 		}
 	}
-  
+
   p{
     text-align: left;
   }
@@ -84,13 +86,15 @@ h2,
   color: $white;
   @extend %P-mobile-margins;
   box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	@include mq(large) {
+		padding: 20px 10%;
+	}
 	& li{
 		list-style: initial;
 	}
 }
 
-#aboutMe,
-#resume{
+#aboutMe{
 	@include mq(large) {
 		padding: 20px 5px;
 	}
@@ -143,6 +147,7 @@ h2,
 			margin-bottom: 0;
 			padding-left: 0;
 			& li{
+				display: inherit;
 		    margin-left: em(30px);
 				margin-right: em(30px);
 		  }
