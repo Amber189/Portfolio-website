@@ -601,20 +601,8 @@ nav ul {
   padding-right: 0;
   padding-top: 15%;
   height: 450px;
-  background: linear-gradient(#F9F9F2, transparent 30%), linear-gradient(0deg, #fff, transparent), #FECA61 url("../img/amber_opt.jpg") no-repeat center;
+  background: linear-gradient(#F9F9F2, transparent 30%), linear-gradient(0deg, #fff, transparent), #FECA61 url("../img/desk.jpg") no-repeat center;
   background-size: cover; }
-
-#headShot {
-  display: inline-block;
-  max-height: 200px;
-  margin: 30px 5% 0;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  padding: 5px;
-  width: 150px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 
 .portfolio {
   margin: 0 auto; }
